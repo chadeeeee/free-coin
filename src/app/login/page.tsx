@@ -85,7 +85,7 @@ export default function LoginPage() {
                     <div className="text-center mb-8">
                         <h1
                             className="text-3xl font-bold mb-2 text-[#f5d77a]"
-                            style={{ fontFamily: "var(--font-cinzel)", textShadow: "0 0 30px rgba(201,168,76,0.3)" }}
+                            style={{ fontFamily: "var(--font-cinzel)", textShadow: "0 0 30px rgba(201,168,76,0.3)", marginTop: 20 }}
                         >
                             Welcome Back
                         </h1>
@@ -96,7 +96,7 @@ export default function LoginPage() {
                         {/* Email */}
                         <div>
                             <label className="block text-xs uppercase tracking-[0.2em] text-[#c9a84c] mb-3 font-semibold"
-                                style={{ fontFamily: "var(--font-cinzel)" }}>
+                                style={{ fontFamily: "var(--font-cinzel)", margin: "10px 20px 0 10px" }}>
                                 Email
                             </label>
                             <input
@@ -107,7 +107,7 @@ export default function LoginPage() {
                            border border-[#c9a84c]/20 focus:border-[#c9a84c]/60 focus:outline-none
                            transition-all duration-300
                            focus:shadow-[0_0_20px_rgba(201,168,76,0.15)]"
-                                style={{ background: "rgba(26,18,8,0.8)" }}
+                                style={{ background: "rgba(26,18,8,0.8)", margin: "0px 0px 0 10px", width: "95%", padding: "5px 0px 5px 5px" }}
                                 placeholder="your@email.com"
                                 required
                             />
@@ -116,7 +116,7 @@ export default function LoginPage() {
                         {/* Password */}
                         <div>
                             <label className="block text-xs uppercase tracking-[0.2em] text-[#c9a84c] mb-3 font-semibold"
-                                style={{ fontFamily: "var(--font-cinzel)" }}>
+                                style={{ fontFamily: "var(--font-cinzel)", margin: "10px 20px 0 10px" }}>
                                 Password
                             </label>
                             <input
@@ -127,14 +127,14 @@ export default function LoginPage() {
                            border border-[#c9a84c]/20 focus:border-[#c9a84c]/60 focus:outline-none
                            transition-all duration-300
                            focus:shadow-[0_0_20px_rgba(201,168,76,0.15)]"
-                                style={{ background: "rgba(26,18,8,0.8)" }}
+                                style={{ background: "rgba(26,18,8,0.8)", margin: "0px 0px 0 10px", width: "95%", padding: "5px 0px 5px 5px" }}
                                 placeholder="••••••••"
                                 required
                             />
                         </div>
 
                         {/* Forgot password */}
-                        <div className="text-right">
+                        <div className="text-right" style={{ margin: "10px 20px 0 10px" }}>
                             <a href="#" className="text-xs text-[#c9a84c]/70 hover:text-[#f5d77a] transition-colors">
                                 Forgot password?
                             </a>
@@ -151,7 +151,7 @@ export default function LoginPage() {
                          shadow-[0_0_25px_rgba(201,168,76,0.3)]
                          hover:shadow-[0_0_35px_rgba(201,168,76,0.5)]
                          disabled:opacity-60 disabled:cursor-not-allowed"
-                            style={{ fontFamily: "var(--font-cinzel)" }}
+                            style={{ fontFamily: "var(--font-cinzel)", width: "95%", margin: "20px 0px 20px 10px", padding: "10px 0px 10px 0px" }}
                         >
                             {loading ? "Signing in..." : "Login"}
                         </button>
@@ -166,7 +166,7 @@ export default function LoginPage() {
                     </div>
 
                     {/* Join link */}
-                    <p className="text-center text-sm text-[#f5e6c8]/60">
+                    <p className="text-center text-sm text-[#f5e6c8]/60" style={{ margin: "20px 0px 10px 0px" }}>
                         Don&apos;t have an account?{" "}
                         <Link href="/join" className="text-[#f5d77a] hover:text-[#ffe599] transition-colors font-semibold">
                             Join Now

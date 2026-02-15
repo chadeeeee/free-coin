@@ -90,7 +90,7 @@ export default function JoinPage() {
                     <div className="text-center mb-8">
                         <h1
                             className="text-3xl font-bold mb-2 text-[#f5d77a]"
-                            style={{ fontFamily: "var(--font-cinzel)", textShadow: "0 0 30px rgba(201,168,76,0.3)" }}
+                            style={{ fontFamily: "var(--font-cinzel)", textShadow: "0 0 30px rgba(201,168,76,0.3)", marginTop: 20 }}
                         >
                             Create Account
                         </h1>
@@ -101,18 +101,18 @@ export default function JoinPage() {
                         {/* Username */}
                         <div>
                             <label className="block text-xs uppercase tracking-[0.2em] text-[#c9a84c] mb-3 font-semibold"
-                                style={{ fontFamily: "var(--font-cinzel)" }}>
+                                style={{ fontFamily: "var(--font-cinzel)", margin: "10px 20px 0 10px" }}>
                                 Username
                             </label>
                             <input
                                 type="text"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
-                                className="w-full px-4 py-4 rounded-lg text-[#f5e6c8] placeholder-[#f5e6c8]/30
+                                className=" px-4 py-4 rounded-lg text-[#f5e6c8] placeholder-[#f5e6c8]/30
                            border border-[#c9a84c]/20 focus:border-[#c9a84c]/60 focus:outline-none
                            transition-all duration-300
                            focus:shadow-[0_0_20px_rgba(201,168,76,0.15)]"
-                                style={{ background: "rgba(26,18,8,0.8)" }}
+                                style={{ background: "rgba(26,18,8,0.8)", margin: "0px 0px 0 10px", width: "95%", padding: "5px 0px 5px 5px" }}
                                 placeholder="Choose a username"
                                 required
                             />
@@ -120,8 +120,8 @@ export default function JoinPage() {
 
                         {/* Email */}
                         <div>
-                            <label className="block text-xs uppercase tracking-[0.2em] text-[#c9a84c] mb-3 font-semibold"
-                                style={{ fontFamily: "var(--font-cinzel)" }}>
+                            <label className="block text-xs uppercase tracking-[0.2e] text-[#c9a84c] mb-3 font-semibold"
+                                style={{ fontFamily: "var(--font-cinzel)", margin: "10px 0px 0 10px" }}>
                                 Email
                             </label>
                             <input
@@ -132,7 +132,7 @@ export default function JoinPage() {
                            border border-[#c9a84c]/20 focus:border-[#c9a84c]/60 focus:outline-none
                            transition-all duration-300
                            focus:shadow-[0_0_20px_rgba(201,168,76,0.15)]"
-                                style={{ background: "rgba(26,18,8,0.8)" }}
+                                style={{ background: "rgba(26,18,8,0.8)", margin: "0px 0px 0 10px", width: "95%", padding: "5px 0px 5px 5px" }}
                                 placeholder="your@email.com"
                                 required
                             />
@@ -141,7 +141,7 @@ export default function JoinPage() {
                         {/* Password */}
                         <div>
                             <label className="block text-xs uppercase tracking-[0.2em] text-[#c9a84c] mb-3 font-semibold"
-                                style={{ fontFamily: "var(--font-cinzel)" }}>
+                                style={{ fontFamily: "var(--font-cinzel)", margin: "10px 0px 0 10px" }}>
                                 Password
                             </label>
                             <input
@@ -152,7 +152,7 @@ export default function JoinPage() {
                            border border-[#c9a84c]/20 focus:border-[#c9a84c]/60 focus:outline-none
                            transition-all duration-300
                            focus:shadow-[0_0_20px_rgba(201,168,76,0.15)]"
-                                style={{ background: "rgba(26,18,8,0.8)" }}
+                                style={{ background: "rgba(26,18,8,0.8)", margin: "0px 0px 0 10px", width: "95%", padding: "5px 0px 5px 5px" }}
                                 placeholder="••••••••"
                                 required
                             />
@@ -161,7 +161,7 @@ export default function JoinPage() {
                         {/* Confirm Password */}
                         <div>
                             <label className="block text-xs uppercase tracking-[0.2em] text-[#c9a84c] mb-3 font-semibold"
-                                style={{ fontFamily: "var(--font-cinzel)" }}>
+                                style={{ fontFamily: "var(--font-cinzel)", margin: "10px 0px 0 10px" }}>
                                 Confirm Password
                             </label>
                             <input
@@ -172,7 +172,7 @@ export default function JoinPage() {
                            border border-[#c9a84c]/20 focus:border-[#c9a84c]/60 focus:outline-none
                            transition-all duration-300
                            focus:shadow-[0_0_20px_rgba(201,168,76,0.15)]"
-                                style={{ background: "rgba(26,18,8,0.8)" }}
+                                style={{ background: "rgba(26,18,8,0.8)", margin: "0px 0px 0 10px", width: "95%", padding: "5px 0px 5px 5px" }}
                                 placeholder="••••••••"
                                 required
                             />
@@ -189,7 +189,7 @@ export default function JoinPage() {
                          shadow-[0_0_25px_rgba(201,168,76,0.3)]
                          hover:shadow-[0_0_35px_rgba(201,168,76,0.5)]
                          disabled:opacity-60 disabled:cursor-not-allowed mt-4"
-                            style={{ fontFamily: "var(--font-cinzel)" }}
+                            style={{ fontFamily: "var(--font-cinzel)", width: "95%", margin: "20px 0px 20px 10px", padding: "10px 0px 10px 0px" }}
                         >
                             {loading ? "Creating account..." : "Join"}
                         </button>
@@ -204,7 +204,7 @@ export default function JoinPage() {
                     </div>
 
                     {/* Login link */}
-                    <p className="text-center text-sm text-[#f5e6c8]/60">
+                    <p className="text-center text-sm text-[#f5e6c8]/60" style={{ margin: "20px 0px 10px 0px" }}>
                         Already have an account?{" "}
                         <Link href="/login" className="text-[#f5d77a] hover:text-[#ffe599] transition-colors font-semibold">
                             Login
