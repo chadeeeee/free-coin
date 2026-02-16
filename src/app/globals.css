@@ -64,31 +64,48 @@ body {
   }
 }
 
-/* Pulse glow for the SPIN button */
-@keyframes pulseGlow {
+/* Top light pulse */
+@keyframes topLightPulse {
 
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(201, 168, 76, 0.4), 0 0 40px rgba(201, 168, 76, 0.2);
+    opacity: 0.56;
+    transform: scale(1);
   }
 
   50% {
-    box-shadow: 0 0 30px rgba(201, 168, 76, 0.7), 0 0 60px rgba(201, 168, 76, 0.4);
+    opacity: 0.9;
+    transform: scale(1.04);
   }
 }
 
-/* Light sweep animation */
-@keyframes lightSweep {
-  0% {
-    opacity: 0.3;
+/* Top light beam sway */
+@keyframes topLightSweep {
+
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: rotate(0deg) translateY(0);
   }
 
   50% {
-    opacity: 0.6;
+    opacity: 0.86;
+    transform: rotate(5deg) translateY(1.5%);
+  }
+}
+
+/* Fiery center ring motion */
+@keyframes spinFireRing {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.04);
   }
 
   100% {
-    opacity: 0.3;
+    transform: rotate(360deg) scale(1);
   }
 }
 
@@ -120,17 +137,17 @@ body {
 /* Result popup animation */
 @keyframes resultPopup {
   0% {
-    transform: scale(0) translateY(20px);
+    transform: scale(0.93) translateY(12px);
     opacity: 0;
   }
 
-  60% {
-    transform: scale(1.1) translateY(-5px);
+  65% {
+    transform: scale(1.02) translateY(0);
     opacity: 1;
   }
 
   100% {
-    transform: scale(1) translateY(0);
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -143,5 +160,72 @@ body {
 
   100% {
     background-position: 200% center;
+  }
+}
+
+@keyframes cardDriftLeft {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-11deg);
+  }
+
+  35% {
+    transform: translate3d(10px, -8px, 0) rotate(-9deg);
+  }
+
+  75% {
+    transform: translate3d(-6px, 6px, 0) rotate(-13deg);
+  }
+}
+
+@keyframes cardDriftRight {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(10deg);
+  }
+
+  40% {
+    transform: translate3d(-10px, -8px, 0) rotate(8deg);
+  }
+
+  75% {
+    transform: translate3d(6px, 6px, 0) rotate(12deg);
+  }
+}
+
+@keyframes cardDriftTop {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-18deg);
+  }
+
+  45% {
+    transform: translate3d(8px, -8px, 0) rotate(-15deg);
+  }
+
+  80% {
+    transform: translate3d(-4px, 6px, 0) rotate(-20deg);
+  }
+}
+
+@keyframes chipFloatLeft {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-17deg);
+  }
+
+  50% {
+    transform: translate3d(10px, -8px, 0) rotate(-12deg);
+  }
+}
+
+@keyframes chipFloatRight {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(12deg);
+  }
+
+  50% {
+    transform: translate3d(-10px, -8px, 0) rotate(8deg);
   }
 }

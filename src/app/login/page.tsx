@@ -43,7 +43,7 @@ export default function LoginPage() {
             </div>
 
             {/* Header */}
-            <header className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between px-6 md:px-12 py-4">
+            <header className="absolute top-0 left-0 right-0 z-[40] pointer-events-auto flex items-center justify-between px-6 md:px-12 py-4">
                 <Link href="/" className="flex items-center gap-3">
                     <Image
                         src="/Gemini_Generated_Image_76yuuh76yuuh76yu-depositphotos-bgremover 1.png"
@@ -53,17 +53,17 @@ export default function LoginPage() {
                         className="drop-shadow-lg rotate-90"
                     />
                 </Link>
-                <div className="flex items-center gap-4">
+                <div className="relative z-[41] pointer-events-auto flex items-center gap-4">
                     <Link
                         href="/login"
-                        className="px-10 py-3.5 text-sm font-semibold tracking-widest uppercase border border-[#f5d77a]/80 rounded-sm text-[#f5d77a] bg-gradient-to-b from-[#3a2f1e]/90 to-[#2a1f0e]/90 shadow-[0_0_25px_rgba(201,168,76,0.3)] transition-all duration-300"
+                        className="relative z-[42] pointer-events-auto px-10 py-3.5 text-sm font-semibold tracking-widest uppercase border border-[#f5d77a]/80 rounded-sm text-[#f5d77a] bg-gradient-to-b from-[#3a2f1e]/90 to-[#2a1f0e]/90 shadow-[0_0_25px_rgba(201,168,76,0.3)] transition-all duration-300"
                         style={{ fontFamily: "var(--font-cinzel)", cursor: "pointer", marginTop: 20 }}
                     >
                         <p className="login-join-button">LOGIN</p>
                     </Link>
                     <Link
                         href="/join"
-                        className="px-10 py-3.5 text-sm font-semibold tracking-widest uppercase rounded-sm text-[#1a1208] bg-gradient-to-b from-[#f5d77a] to-[#c9a84c] hover:from-[#ffe599] hover:to-[#d4b35a] transition-all duration-300 shadow-[0_0_20px_rgba(201,168,76,0.3)]"
+                        className="relative z-[42] pointer-events-auto px-10 py-3.5 text-sm font-semibold tracking-widest uppercase rounded-sm text-[#1a1208] bg-gradient-to-b from-[#f5d77a] to-[#c9a84c] hover:from-[#ffe599] hover:to-[#d4b35a] transition-all duration-300 shadow-[0_0_20px_rgba(201,168,76,0.3)]"
                         style={{ fontFamily: "var(--font-cinzel)", cursor: "pointer", marginTop: 20, marginRight: 20 }}
                     >
                         <p className="login-join-button">JOIN</p>
