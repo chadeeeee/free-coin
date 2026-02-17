@@ -34,7 +34,6 @@ export default function Home() {
     setSpinning(true)
     setShowResult(false)
     setResult(null)
-    setFireActive(false)
 
     // 1. Determine Target
     const targetSegmentIndex = Math.floor(Math.random() * SEGMENTS.length)
@@ -268,8 +267,8 @@ export default function Home() {
           style={{
             width: '34.88vw',
             height: '34.88vw',
-            top: '72.31%',
-            left: '80.62%',
+            top: '70.31%',
+            left: '70.62%',
             transform: 'rotate(-178.84deg)',
             animation: 'chipFloatRight 9s ease-in-out infinite',
           }}
@@ -291,7 +290,7 @@ export default function Home() {
           className="absolute block transition-transform hover:scale-105"
           style={{
             top: '29px',
-            left: '190.55px',
+            left: '150px',
             width: '128.39px',
             height: '87.64px',
           }}
@@ -311,10 +310,10 @@ export default function Home() {
       (Висота лого 87.64 / 2) + Top лого 29 = 72.82px (це центр).
       Висота кнопок ~48px. Отже (72.82 - (48 / 2)) = 48.82px зверху. */}
         <div
-          className="absolute flex items-center gap-3 md:gap-4 xl:gap-6"
+          className="absolute flex items-center gap-6"
           style={{
-            top: '48.8px',
-            right: '190.55px',
+            top: '40px',
+            right: '35px',
           }}
         >
           <Link
@@ -407,24 +406,16 @@ export default function Home() {
               className="object-contain"
             />
           </div>
-          <div className="absolute inset-[35%] z-10 pointer-events-none">
-            <Image
-              src="/Внутреность колеса.png"
-              alt="Inner Glow"
-              fill
-              className="object-contain mix-blend-screen"
-            />
-          </div>
 
           {/* SPIN BUTTON */}
           <button
             onClick={spinWheel}
             disabled={spinning}
-            className="absolute z-30 start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full outline-none transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-80 disabled:grayscale-[0.5]"
-            style={{ width: '23%', height: '25.5%', cursor: 'pointer' }}
+            className="absolute z-30 start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full outline-none transition-all duration-300 disabled:cursor-not-allowed"
+            style={{ width: '23%', height: '26.5%', cursor: 'pointer' }}
           >
             <div
-              className={`absolute inset-0 rounded-full bg-gradient-to-br from-[#ffd700] via-[#ff8c00] to-[#8b0000] p-[2px] ${spinning ? '' : 'animate-[firePulse_2s_infinite]'}`}
+              className="absolute inset-0 rounded-full bg-gradient-to-br from-[#ffd700] via-[#ff8c00] to-[#8b0000] p-[2px] animate-[firePulse_2s_infinite]"
             >
               <div className="flex h-full w-full items-center justify-center rounded-full bg-gradient-to-br from-[#ca8a04] to-[#451a03] shadow-inner">
                 <span className="relative z-10 font-cinzel text-[clamp(1rem,2vw,2rem)] font-black tracking-widest text-[#fffadd] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
@@ -433,7 +424,7 @@ export default function Home() {
               </div>
             </div>
             {/* Fire Particules/Glow Overlay */}
-            {!spinning && fireActive && (
+            {fireActive && (
               <div className="absolute inset-[-20%] pointer-events-none z-0 rounded-full mix-blend-screen">
                 <div className="absolute inset-0 animate-[fireGlow_3s_infinite] rounded-full bg-gradient-to-t from-orange-600 to-yellow-300 opacity-40 blur-xl" />
               </div>
@@ -469,7 +460,7 @@ export default function Home() {
             <div className="mt-8 flex flex-col items-center gap-4">
               <button
                 className="group relative w-full max-w-sm overflow-hidden rounded-lg bg-gradient-to-r from-[#eab308] to-[#a16207] px-8 py-4 font-cinzel text-lg font-bold text-white shadow-[0_0_20px_rgba(234,179,8,0.4)] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(234,179,8,0.6)]"
-                onClick={() => (window.location.href = '/register')}
+                onClick={() => (window.location.href = '/join')}
                 style={{ marginTop: "20px", cursor: "pointer" }}
               >
                 <span className="relative z-10 drop-shadow-md">REGISTER NOW</span>
