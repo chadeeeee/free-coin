@@ -249,7 +249,7 @@ export default function Home() {
             width: '25.01vw',
             height: '35.42vw',
             top: '2.41%',
-            left: '70.73%',
+            left: '77.73%',
             transform: 'rotate(40.92deg)',
             animation: 'cardDriftRight 8.5s ease-in-out infinite',
           }}
@@ -297,7 +297,7 @@ export default function Home() {
           }}
         >
           <Image
-            src="/Group 137.png"
+            src="/logo.png"
             alt="FreeCoins Logo"
             width={128}
             height={88}
@@ -369,12 +369,12 @@ export default function Home() {
           <div className="absolute inset-[-5%] z-0 rounded-full bg-[#ffaa00] opacity-10 blur-[80px]" />
 
           {/* Wheel Pointer (Fixed) */}
-          <div className="absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-1/2 w-[14%] aspect-[265/116]">
+          <div className="absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-1/2 w-[18%] aspect-[265/116]">
             <Image
               src="/Gemini_Generated_Image_76yuuh76yuuh76yu-depositphotos-bgremover 1.png"
               alt="Pointer"
               fill
-              className="object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
+              className="drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
             />
           </div>
 
@@ -421,7 +421,7 @@ export default function Home() {
             onClick={spinWheel}
             disabled={spinning}
             className="absolute z-30 start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full outline-none transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-80 disabled:grayscale-[0.5]"
-            style={{ width: '22%', height: '22%' }}
+            style={{ width: '23%', height: '25.5%', cursor: 'pointer' }}
           >
             <div
               className={`absolute inset-0 rounded-full bg-gradient-to-br from-[#ffd700] via-[#ff8c00] to-[#8b0000] p-[2px] ${spinning ? '' : 'animate-[firePulse_2s_infinite]'}`}
@@ -453,12 +453,12 @@ export default function Home() {
             <div className="absolute -left-20 -top-20 h-40 w-40 rounded-full bg-[#ffaa00] opacity-20 blur-3xl" />
             <div className="absolute -right-20 -bottom-20 h-40 w-40 rounded-full bg-[#ffaa00] opacity-20 blur-3xl" />
 
-            <h2 className="mb-2 font-cinzel text-xl font-bold tracking-[0.3em] text-[#d4af37] uppercase">
+            <h2 className="mb-2 font-cinzel text-xl font-bold tracking-[0.3em] text-[#d4af37] uppercase" style={{ marginTop: "20px" }}>
               Congratulations!
             </h2>
 
             <div className="my-6">
-              <span className="block font-cinzel text-7xl font-black text-transparent bg-clip-text bg-gradient-to-b from-[#fff] via-[#ffd700] to-[#b8860b] drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)] animate-pulse">
+              <span className="block font-cinzel text-7xl font-black text-transparent bg-clip-text bg-gradient-to-b from-[#fff] via-[#ffd700] to-[#b8860b] drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)] animate-pulse" style={{ marginTop: "20px" }}>
                 {result.toLocaleString()}
               </span>
               <span className="mt-2 block font-cinzel text-2xl font-bold tracking-widest text-[#f0e6d2]">
@@ -470,6 +470,7 @@ export default function Home() {
               <button
                 className="group relative w-full max-w-sm overflow-hidden rounded-lg bg-gradient-to-r from-[#eab308] to-[#a16207] px-8 py-4 font-cinzel text-lg font-bold text-white shadow-[0_0_20px_rgba(234,179,8,0.4)] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(234,179,8,0.6)]"
                 onClick={() => (window.location.href = '/register')}
+                style={{ marginTop: "20px", cursor: "pointer" }}
               >
                 <span className="relative z-10 drop-shadow-md">REGISTER NOW</span>
                 <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
@@ -478,6 +479,7 @@ export default function Home() {
               <button
                 onClick={() => setShowResult(false)}
                 className="text-sm text-[#886633] underline hover:text-[#cca045] transition-colors"
+                style={{ marginBottom: "20px", cursor: "pointer" }}
               >
                 Close
               </button>
