@@ -284,18 +284,39 @@ export default function Home() {
       </div>
 
       {/* Header */}
-      <header className="relative z-[40] flex items-center justify-between px-4 pt-4 md:px-8 md:pt-5 xl:px-12 xl:pt-6 pointer-events-auto">
-        <Link href="/" className="block w-[100px] md:w-[130px] xl:w-[160px]">
+      <header className="relative z-[40] w-full pointer-events-auto h-[120px]">
+        {/* Логотип: 29px зверху, 190.55px зліва */}
+        <Link
+          href="/"
+          className="absolute block transition-transform hover:scale-105"
+          style={{
+            top: '29px',
+            left: '190.55px',
+            width: '128.39px',
+            height: '87.64px',
+          }}
+        >
           <Image
             src="/Group 137.png"
             alt="FreeCoins Logo"
-            width={160}
-            height={110}
-            className="h-auto w-full object-contain drop-shadow-[0_0_20px_rgba(201,168,76,0.5)]"
+            width={128}
+            height={88}
+            className="h-full w-full object-contain drop-shadow-[0_0_20px_rgba(201,168,76,0.5)]"
             priority
           />
         </Link>
-        <div className="flex items-center gap-3 md:gap-4 xl:gap-6">
+
+        {/* Блок кнопок: 190.55px справа. 
+      Щоб вони були по центру логотипа: 
+      (Висота лого 87.64 / 2) + Top лого 29 = 72.82px (це центр).
+      Висота кнопок ~48px. Отже (72.82 - (48 / 2)) = 48.82px зверху. */}
+        <div
+          className="absolute flex items-center gap-3 md:gap-4 xl:gap-6"
+          style={{
+            top: '48.8px',
+            right: '190.55px',
+          }}
+        >
           <Link
             href="/login"
             className="login-join-button group relative flex h-[38px] w-[110px] items-center justify-center rounded-full border border-[#b58a3f]/80 bg-[#170f05]/80 md:h-[44px] md:w-[136px] xl:h-[48px] xl:w-[160px] overflow-hidden transition-all hover:scale-105 active:scale-95"
@@ -305,6 +326,7 @@ export default function Home() {
               LOGIN
             </span>
           </Link>
+
           <Link
             href="/join"
             className="login-join-button group relative flex h-[38px] w-[110px] items-center justify-center rounded-full border border-[#d7b062] bg-gradient-to-b from-[#fcd34d] to-[#b45309] md:h-[44px] md:w-[136px] xl:h-[48px] xl:w-[160px] overflow-hidden shadow-[0_0_20px_rgba(251,191,36,0.4)] transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(251,191,36,0.6)] active:scale-95"
